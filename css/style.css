@@ -1,3 +1,8 @@
+/*
+  Created by: Neel Patel
+  Student Id: c0940755
+*/
+
 body {
     margin: 0;
     font-family: 'Georgia', serif;
@@ -227,4 +232,46 @@ footer a:hover {
     font-size: 1em;
     color: #555;
     margin: 5px 0;
+}
+
+/* training.css */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+table caption {
+    caption-side: top;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #34495e;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #ecf0f1;
+}
+
+td img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
 }
