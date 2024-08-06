@@ -29,6 +29,7 @@
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="team.html">Our Team</a>
+                <a href="media.html">Media</a>
                 <a href="specials.html">Specials</a>
                 <a href="training.html">Training</a>
                 <a href="contact.html">Contact Us</a>
@@ -38,17 +39,46 @@
         <main>
             <h2>Contact Us</h2>
             <p>We would love to hear from you! Please fill out the form below to get in touch.</p>
+
             <form action="mailto:info@foodscale.com" method="post" enctype="text/plain" class="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                
-                <button type="submit">Send</button>
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <ol>
+                        <li>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </li>
+                        <li>
+                            <label for="contactMethod">Preferred Contact Method:</label>
+                            <select id="contactMethod" name="contactMethod" onchange="changeContactMethod()">
+                                <option value="email">Email</option>
+                                <option value="phone">Phone</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="contactDetail" id="contactLabel">Email:</label>
+                            <input type="email" id="contactDetail" name="contactDetail" required>
+                        </li>
+                        <li>
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </li>
+                        <li>
+                            <label for="contactTime">Preferred Contact Time:</label>
+                            <input type="date" id="contactTime" name="contactTime">
+                        </li>
+                        <fieldset>
+                            <legend>Would you like to subscribe?</legend>
+                            <div class="radio-group">
+                                <label><input type="radio" name="subscribe" value="yes"> Yes</label>
+                                <label><input type="radio" name="subscribe" value="no"> No</label>
+                            </div>
+                        </fieldset>
+                        
+                    </ol>
+                    <button type="submit">Submit Request</button>
+                    <button type="reset">Reset Form</button>
+                </fieldset>
             </form>
         </main>
 
@@ -58,6 +88,26 @@
             <p>Neel c0940755</p>
         </footer>
     </div>
+
+    <script>
+        function changeContactMethod() {
+            const contactMethod = document.getElementById('contactMethod').value;
+            const contactLabel = document.getElementById('contactLabel');
+            const contactDetail = document.getElementById('contactDetail');
+            
+            if (contactMethod === 'phone') {
+                contactLabel.textContent = 'Phone:';
+                contactDetail.type = 'tel';
+                contactDetail.name = 'phone';
+                contactDetail.placeholder = 'Enter your phone number';
+            } else {
+                contactLabel.textContent = 'Email:';
+                contactDetail.type = 'email';
+                contactDetail.name = 'email';
+                contactDetail.placeholder = 'Enter your email address';
+            }
+        }
+    </script>
 </body>
 
 </html>

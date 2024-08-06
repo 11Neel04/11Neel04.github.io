@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media - Food Scales</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Additional Styles for Media Page */
+        body {
+            background-color: #f5f5f5;
+            margin: 0;
+            font-family: 'Georgia', serif;
+            transition: background-color 0.5s ease;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
+        }
+
+        nav {
+            background-color: #34495e;
+            padding: 10px 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav:hover {
+            background-color: #2c3e50;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        .video-section, .audio-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .video-section:hover, .audio-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-section h3, .audio-section h3 {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .video-section h3:hover, .audio-section h3:hover {
+            color: #3498db;
+        }
+
+        .video-player, .audio-player {
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.5s ease;
+        }
+
+        .video-player:hover, .audio-player:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        footer:hover {
+            background-color: #f0f0f0;
+        }
+
+        footer a {
+            color: #2c3e50;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #3498db;
+        }
+    </style>
+</head>
+
+<header>
+    <div class="banner-container">
+        <img src="images/main scale.jpg" alt="Company Banner - Digital Food Scale" class="banner">
+    </div>
+</header>
+
+<body>
+    <div class="container">
+        <nav>
+            <a href="index.html">
+                <img src="images/food scale logo.jpg" alt="Company Logo" class="logo">
+            </a>
+            <div>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="team.html">Our Team</a>
+                <a href="media.html">Media</a>
+                <a href="specials.html">Specials</a>
+                <a href="training.html">Training</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </nav>
+
+        <main>
+            <h2>Media Gallery</h2>
+            <p>Explore how our digital food scales enhance your culinary experience through multimedia content.</p>
+            
+            <!-- Video Section -->
+            <section class="video-section">
+                <h3>Watch Our Scales in Action</h3>
+                <video controls width="100%" class="video-player">
+                    <source src="videos/Digital Food Scale Preview.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>See how our digital food scales provide precision and ease in your kitchen.</p>
+            </section>
+
+            <!-- Audio Section -->
+            <section class="audio-section">
+                <h3>Listen to Our Promotional Message</h3>
+                <audio controls class="audio-player">
+                    <source src="audio/Digital Food Scale Promotional audio.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+                <p>Enjoy a brief introduction to the benefits of our digital food scales.</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024. All Rights Reserved.</p>
+            <p><a href="mailto:info@foodscale.com">Request information</a></p>
+            <p>Neel c0940755</p>
+        </footer>
+    </div>
+</body>
+</html>
