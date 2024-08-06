@@ -94,6 +94,7 @@ main blockquote {
     border-left: 5px solid #3498db;
 }
 
+/* Styles for the contact form */
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
@@ -104,6 +105,19 @@ main blockquote {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.contact-form fieldset {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.contact-form legend {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
 .contact-form label {
     display: block;
     font-size: 1.1em;
@@ -112,13 +126,25 @@ main blockquote {
 }
 
 .contact-form input,
-.contact-form textarea {
-    width: 100%;
+.contact-form textarea,
+.contact-form select {
+    width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1em;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+.contact-form .radio-group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.contact-form .radio-group label {
+    margin: 0;
 }
 
 .contact-form button {
@@ -130,6 +156,7 @@ main blockquote {
     font-size: 1.1em;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-right: 10px;
 }
 
 .contact-form button:hover {
@@ -274,4 +301,107 @@ td img {
     width: 100px;
     height: auto;
     border-radius: 8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav img.logo {
+        margin-bottom: 10px;
+    }
+
+    nav div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    main h2 {
+        font-size: 2em;
+    }
+
+    main p {
+        font-size: 1em;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    table {
+        border: none;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        margin: 0 0 1rem 0;
+        background-color: #ffffff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: transparent;
+    }
+
+    td {
+        border: none;
+        padding: 12px 15px;
+        position: relative;
+        text-align: right;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: calc(100% - 30px);
+        padding-right: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    td:last-child {
+        border-bottom: 0;
+    }
+
+    .contact-form {
+        padding: 10px;
+    }
+
+    .contact-form fieldset {
+        padding: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+        width: calc(100% - 15px);
+        padding: 8px;
+    }
+
+    .contact-form button {
+        padding: 8px 15px;
+        font-size: 1em;
+    }
 }
